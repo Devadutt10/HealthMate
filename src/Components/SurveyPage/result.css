@@ -1,0 +1,109 @@
+.resultContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 30px; 
+    padding: 20px;
+    max-height: 100vh; 
+    overflow: hidden;
+    background: url('/images/bgImage.png');
+}
+
+.resultDisplay, .remarkDisplay {
+    width: 45%; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; 
+    max-height: 90vh; 
+}
+
+.resultDisplay{
+    background-color: #008080;
+    color: white
+}
+
+.additionalRemark p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal; 
+}
+
+.individualRemarks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 85vh;
+    overflow-y:auto; 
+    padding: 10px;
+}
+
+
+.positive {
+    background-color: #d4edda; 
+    color: #155724; 
+    border-left: 8px solid #28a745; 
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+.negative {
+    background-color: #f8d7da; 
+    color: #721c24; 
+    border-left: 8px solid #dc3545; 
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+.positive:last-child, .negative:last-child {
+    margin-bottom: 0;
+}
+
+.result {
+    text-align: center;
+    font-size: 3rem; 
+    font-weight: bold;
+    padding: 20px;
+    background-color: #e3e3e3;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultSum {
+    font-size: 4rem; 
+}
+
+.restartBtn{
+    font-size: 16px; 
+    width: 100px;  
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(72, 39, 151);
+    color: white;
+    margin-top: 1rem;
+    align-self: center; 
+    margin-top: 30px;
+}
+
+.restartBtn:hover{
+    cursor: pointer;
+    background-color: rgb(244, 48, 48);
+}

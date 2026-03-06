@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: rgba(0, 128, 0, 0.8);
+    z-index: 1000;
+  }
+  
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  .nav-item:hover {
+    color: #a0ffa0;
+    transform: scale(1.1);
+    border-bottom: 2px solid white;
+  }
+  
+  .login-btn {
+    background: #ff4d4d;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 5rem;
+  }
+  
+  .login-btn:hover {
+    background: #ff6666;
+  }
+
+  .container{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+
+  .hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url(/welcome/doctor2.jpg) no-repeat center center/cover;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed; 
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #ff0000, #ff4d4d); /* Red gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+  }
+
+  .hero p {
+    color: red;
+    font-size: 1.5rem;
+  }
+  
+  
+  
+  .services {
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 100vh; /* ✅ Allows section to expand if needed */
+    height: auto; /* ✅ Prevents overflow issues */
+    padding-bottom: 50px;
+  }
+  
+  .serviceContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .eachService {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 400px; /* Ensuring all divs have same height */
+    position: relative; /* Needed for consistent button placement */
+  }
+  
+  .eachService h2 {
+    font-size: 1.5rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .eachService h2::after {
+    content: "";
+    width: 60%;
+    height: 3px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+  }
+  
+  .eachService img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .eachService p {
+    font-size: 1rem;
+    color: #333;
+    padding: 0 10px;
+    flex-grow: 1; /* Makes sure paragraph stretches to push the button down */
+  }
+  
+  .serviceBtn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    position: absolute;
+    bottom: 15px; /* Keeps all buttons aligned at the same position */
+  }
+  
+  .serviceBtn:hover {
+    background-color: #e60000;
+  }
+
+  .team {
+    position: relative; /* ✅ Ensures the overlay stays within this section */
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    margin-top: 50px;
+    text-align: center;
+    padding: 50px 20px;
+    background: url('/welcome/aboutBgImage.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden; /* Ensure no unwanted scroll issues */
+  }
+  
+  /* ✅ Overlay with transparency */
+  .team::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6); /* Adjust transparency */
+    z-index: 0;
+    pointer-events: none; /* ✅ Allows scrolling & interaction */
+  }
+  
+  /* ✅ Ensures all content is above the overlay */
+  .team * {
+    position: relative;
+    z-index: 1;
+  }  
+
+.team h1{
+  text-align: center;
+  font-weight: bold;
+  font-size: 4rem;
+  margin-bottom: 40px; /* Creates ample space between heading and div */
+  position: relative;
+  display: inline-block;
+}
+
+.team h1::after {
+  content: "";
+  width: 60%;
+  height: 4px;
+  background-color: red;
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+}
+
+
+/* About Section Styling */
+.aboutDiv {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #f0f8ff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Fixed-size container for images */
+.image-container {
+  width: 50%; /* Ensures image takes 50% */
+  height: 300px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents any shifting */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensures images stay uniform */
+  border-radius: 10px;
+}
+
+.aboutDiv p {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: left;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.contact {
+  width: 100vw;  /* Full width */
+  height: 100vh; /* Full height */
+  background-color: #121212; /* Dark background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff; /* White text for contrast */
+}
+
+.contact h1 {
+  font-size: 2.5rem;
+  position: relative;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.contact h1::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: red; /* Red underline */
+  margin: 8px auto 0;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.contactList p {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  gap: 10px; /* Space between icon and text */
+}
+
+.contactList a {
+  text-decoration: none;
+  color: #ffffff; /* White text */
+  display: flex;
+  align-items: center; /* Ensures vertical alignment */
+  gap: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contactList a:hover {
+  color: red; /* Change color on hover */
+}
+
+.contactList svg {
+  color: #E4405F; /* Instagram brand color */
+  font-size: 1.5rem; /* Adjust size if needed */
+}
